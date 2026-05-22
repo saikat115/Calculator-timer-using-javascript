@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator and Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Calculator & Timer</h2>
+
+<div class="container">
+
+  
+  <div class="calculator">
+    <h3>Calculator</h3>
+    <input type="text" id="display" readonly placeholder="0">
+    <div class="buttons">
+      <button class="btn-clear" onclick="clearDisplay()">AC</button>
+      <button onclick="toggleSign()">+/-</button>
+      <button onclick="percent()">%</button>
+      <button class="btn-op" onclick="appendChar('/')">÷</button>
+
+      <button onclick="appendChar('7')">7</button>
+      <button onclick="appendChar('8')">8</button>
+      <button onclick="appendChar('9')">9</button>
+      <button class="btn-op" onclick="appendChar('*')">×</button>
+
+      <button onclick="appendChar('4')">4</button>
+      <button onclick="appendChar('5')">5</button>
+      <button onclick="appendChar('6')">6</button>
+      <button class="btn-op" onclick="appendChar('-')">−</button>
+
+      <button onclick="appendChar('1')">1</button>
+      <button onclick="appendChar('2')">2</button>
+      <button onclick="appendChar('3')">3</button>
+      <button class="btn-op" onclick="appendChar('+')">+</button>
+
+      <button class="btn-zero" onclick="appendChar('0')">0</button>
+      <button onclick="appendChar('.')">.</button>
+      <button class="btn-eq" onclick="calculate()">=</button>
+    </div>
+  </div>
+
+  
+  <div class="timer">
+    <h3>Countdown Timer</h3>
+
+    <div id="timerDisplay">00:00:00</div>
+
+    <div class="time-inputs">
+      <div>
+        <label>Hours</label>
+        <input type="number" id="inputH" min="0" max="99" value="0">
+      </div>
+      <div>
+        <label>Minutes</label>
+        <input type="number" id="inputM" min="0" max="59" value="0">
+      </div>
+      <div>
+        <label>Seconds</label>
+        <input type="number" id="inputS" min="0" max="59" value="10">
+      </div>
+    </div>
+
+    <div class="timer-btns">
+      <button id="startBtn" onclick="startTimer()">Start</button>
+      <button id="pauseBtn" onclick="pauseTimer()">Pause</button>
+      <button id="resetBtn" onclick="resetTimer()">Reset</button>
+    </div>
+
+    
+    <div class="sw-section">
+      <h4>Stopwatch</h4>
+      <div id="swDisplay">00:00.000</div>
+      <div class="sw-btns">
+        <button id="swBtn" onclick="swToggle()">Start</button>
+        <button onclick="swLap()">Lap</button>
+        <button onclick="swReset()">Reset</button>
+      </div>
+      <div id="lapList"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

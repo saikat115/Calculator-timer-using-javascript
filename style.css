@@ -1,0 +1,187 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+
+.calculator {
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border: 1px solid #000000;
+  border-radius: 8px;
+  width: 280px;
+}
+
+.calculator h3 {
+  margin-top: 0;
+  color: #444;
+}
+
+#display {
+  width: 100%;
+  height: 45px;
+  font-size: 22px;
+  text-align: right;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  box-sizing: border-box;
+  background: #f9f9f9;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.buttons button {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #765a5a;
+  border-radius: 4px;
+  background-color: #7c7171;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  background-color: #ddd;
+}
+
+.btn-op {
+  background-color: #f0a500;
+  color: white;
+}
+
+.btn-op:hover {
+  background-color: #cc8800;
+}
+
+.btn-eq {
+  background-color: #4CAF50;
+  color: white;
+  grid-column: span 2;
+}
+
+.btn-eq:hover {
+  background-color: #388E3C;
+}
+
+.btn-clear {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.btn-clear:hover {
+  background-color: #c0392b;
+}
+
+.btn-zero {
+  grid-column: span 2;
+}
+
+
+.timer {
+  background: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 280px;
+}
+
+.timer h3 {
+  margin-top: 0;
+  color: #444;
+}
+
+#timerDisplay {
+  font-size: 40px;
+  text-align: center;
+  color: #222;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.time-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.time-inputs div {
+  width: 30%;
+}
+
+.time-inputs label {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+
+.time-inputs input {
+  width: 100%;
+  padding: 6px;
+  text-align: center;
+}
+
+.timer-btns {
+  display: flex;
+  gap: 8px;
+}
+
+.timer-btns button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#startBtn { background: #4CAF50; }
+#pauseBtn { background: #f0a500; }
+#resetBtn { background: #e74c3c; }
+
+.sw-section {
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  padding-top: 14px;
+}
+
+#swDisplay {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.sw-btns {
+  display: flex;
+  gap: 6px;
+}
+
+.sw-btns button {
+  flex: 1;
+  padding: 9px;
+  cursor: pointer;
+}
+
+#lapList {
+  margin-top: 8px;
+  max-height: 90px;
+  overflow-y: auto;
+}
